@@ -42,7 +42,7 @@ namespace VRQuestionnaireToolkit
         [Header("Configure if you want to save the results to remote server:")]
         public bool SaveToServer = false;
         [Tooltip("The target URI to send the results to")]
-        public string TargetURI = "http://www.example-server.com/survey-results.php";
+        // public string TargetURI = "http://www.example-server.com/survey-results.php";
 
         private List<string[]> _csvRows;
         private GameObject _pageFactory;
@@ -97,7 +97,7 @@ namespace VRQuestionnaireToolkit
                 if (SaveToServer)
                 {
                     // check if the provided uri is valid
-                    StartCoroutine(CheckURIValidity(TargetURI));
+                    // StartCoroutine(CheckURIValidity(TargetURI));
                 }
             }
         }
@@ -291,7 +291,7 @@ namespace VRQuestionnaireToolkit
             /* SENDING RESULTS TO REMOTE SERVER */
             if (SaveToServer)
             {
-                StartCoroutine(SendToServer(TargetURI, _completeFileName, contentOfResult.ToString()));
+                // StartCoroutine(SendToServer(TargetURI, _completeFileName, contentOfResult.ToString()));
             }
 
             /* CONSOLIDATING RESULTS */
@@ -306,7 +306,7 @@ namespace VRQuestionnaireToolkit
 
                 if (SaveToServer)
                 {
-                    StartCoroutine(SendToServer(TargetURI, _completeFileName_allResults, content_all_results.ToString()));
+                    // StartCoroutine(SendToServer(TargetURI, _completeFileName_allResults, content_all_results.ToString()));
                 }
             }
 

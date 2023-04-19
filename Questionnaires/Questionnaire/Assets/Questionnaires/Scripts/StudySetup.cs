@@ -62,8 +62,8 @@ namespace VRQuestionnaireToolkit
 
             if (ConfigurationMode & File.Exists(_path))
                 SetTransformToSavedValues();
-            else
-                SetTransformToDefault();
+            // else
+            //     SetTransformToDefault();
         }
 
         void Update()
